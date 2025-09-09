@@ -27,6 +27,12 @@ body {
     
 }
 
+
+
+
+
+
+
 .main-wrapper {
     max-width: 1440px;
     margin: 0px auto;
@@ -153,7 +159,7 @@ h3 {
 
 .background-header {
     height: 800px;
-    background-image: url("/images/desktop/image-header.jpg");
+    background-image: url("../images/desktop/image-header.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -270,7 +276,7 @@ header .contact-btn {
 
 
 .grid-block-2 {
-    background-image: url("/images/desktop/image-transform.jpg");
+    background-image: url("../images/desktop/image-transform.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -278,7 +284,7 @@ header .contact-btn {
 }
 
 .grid-block-3 {
-    background-image: url("/images/desktop/image-stand-out.jpg");
+    background-image: url("../images/desktop/image-stand-out.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -323,7 +329,7 @@ header .contact-btn {
 
 
 .grid-block-5 {
-    background-image: url("/images/desktop/image-graphic-design.jpg");
+    background-image: url("../images/desktop/image-graphic-design.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -335,13 +341,13 @@ header .contact-btn {
 
 
 .grid-block-5 p {
-    width: 350px;
+    max-width: 350px;
     text-align: center;
     padding-bottom: 50px
 }
 
 .grid-block-6 {
-    background-image: url("/images/desktop/image-photography.jpg");
+    background-image: url("../images/desktop/image-photography.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -352,7 +358,7 @@ header .contact-btn {
 }
 
 .grid-block-6 p {
-    width: 350px;
+    max-width: 350px;
     text-align: center;
     padding-bottom: 50px
 }
@@ -363,8 +369,9 @@ header .contact-btn {
 
 /* BOTTOM IMAGES */
 
-.flex-images{
-    display: flex;
+.grid-images{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 
 }
 
@@ -384,7 +391,7 @@ header .contact-btn {
 
 .testimonial-wrapper {
     display: flex;
-    column-gap: 30px;
+    gap: 30px;
     justify-content: center;
     align-items: start;
 }
@@ -423,9 +430,10 @@ footer {
     background-color: var(--green-300);
     height: 350px;
     padding: 50px 0px;
- 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-   
 }
 
 
@@ -441,6 +449,8 @@ footer nav .logo {
     height: 33px;
     width: 170px;
     color: var(--green-600);
+
+  
    
 }
 
@@ -449,14 +459,55 @@ footer .socials {
     gap: 15px;
 }
 
-
-footer .footer-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px; /* space between logo, links, and socials */
 }
+
+footer nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* spacing between logo and links */
+}
+
+footer nav .text-preset-10 {
+  display: flex;
+  gap: 40px; /* evenly spaced links */
+}
+
+
+/* ADDITIONAL CSS FOR FIXES */
+
+.grid-images {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0;
+  padding: 0;
+}
+
+.grid-images picture {
+  display: block;
+}
+
+
+.grid-images img,
+.grid-images source {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* keeps images flush inside their cells */
+  display: block; /* removes inline whitespace */
+}
+
+
+.grid-images img {
+  aspect-ratio: 1 / 1; /* makes them perfect squares */
+  object-fit: cover;
+}
+
+
 
 /* ATTRIBUTION TO FRONTEND-MENTOR IN FOOTER */
 .attribution { 
@@ -474,11 +525,60 @@ footer .footer-wrapper {
 /* RESPONSIVE */
 
 @media  screen and  (max-width: 768px) {
+.grid-blocks {
+    display: grid;
+    gap: 0px;
+    grid-template-columns: 1fr;
+}
+
+
+.grid-block-1{
+    order: 2;
+}
+
+.grid-block-2{
+    order: 1;
+}
+
+.grid-block-3{
+    order: 3;
+}
+
+.grid-block-4{
+    order: 4;
+}
+
+.grid-block-5{
+    order: 5;
+}
+
+.grid-block-6{
+    order: 6;
+}
+
+
+.testimonial-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.grid-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
 
 }
 
 
 @media screen and (max-width: 375px){
+
+   
     
 }
 
