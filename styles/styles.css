@@ -216,8 +216,15 @@ header .contact-btn {
     padding: 10px 12px;
     font-weight: 900;
     border-radius: 28px;
-
 }
+
+header nav img .icon-hamburger {
+    display: none;
+    width: 24px;
+    height: 18px;
+    cursor: pointer;
+}
+
 
 
 
@@ -575,12 +582,6 @@ footer nav .text-preset-10 {
 
 }
 
-
-@media screen and (max-width: 375px){
-
-   
-    
-}
 
 
 
