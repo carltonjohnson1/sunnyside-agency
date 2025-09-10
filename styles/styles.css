@@ -215,6 +215,14 @@ header .contact-btn {
     padding: 10px 12px;
     font-weight: 900;
     border-radius: 28px;
+    transition: 0.3s all ease-in-out;
+
+}
+
+header .contact-btn:hover {
+    color: white;
+    background-color: #ffffff2c;
+    
 }
 
 .icon-hamburger {
