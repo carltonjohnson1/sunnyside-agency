@@ -29,8 +29,9 @@ body {
 
 
 
-
-
+ul {
+    list-style: none;
+}
 
 
 .main-wrapper {
@@ -233,7 +234,34 @@ header .contact-btn:hover {
 }
 
 
+.mobile-nav {
+    background-color: var(--white);
+    width: 80%;
+    height: auto;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin: 10px auto 0px;
+    padding: 15px 0px;
 
+}
+
+.mobile-nav .mob-links {
+    color: var(--grey-550);
+
+}
+
+.mobile-nav .mob-contact-btn {
+    text-transform: uppercase;
+    background-color: var(--yellow-500);
+    color: var(--grey-950);
+    padding: 10px 20px;
+    font-weight: 900;
+    border-radius: 28px;
+    transition: 0.3s all ease-in-out;
+}
 
 
 

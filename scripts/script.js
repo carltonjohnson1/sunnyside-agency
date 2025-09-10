@@ -15,3 +15,6 @@
     });
   });
 
+
+/* Need to still write the code for the mobile menu plus change he links to Li's in the nav the class .mobile-nav needs to be toggled*/
+
